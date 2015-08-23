@@ -1,0 +1,8 @@
+/* fonte principal do h1 */
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+body{ }
+div#painel_login{
+    margin-top: 16%;
+    box-shadow: 0 0 7px #cecece;
+}
+#painel_login h1 { font-family: 'Indie Flower', Arial, serif; font-weight: 400; }
