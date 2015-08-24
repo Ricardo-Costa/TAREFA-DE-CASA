@@ -6,3 +6,5 @@ div#painel_login{
     box-shadow: 0 0 7px #cecece;
 }
 #painel_login h1 { font-family: 'Indie Flower', Arial, serif; font-weight: 400; }
+/* p - alert */
+p.msg_alert{text-align: center; cursor: pointer}

@@ -25,6 +25,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </head>
 <body>
-
+<?php
+/** @if - Exibir mensagens de alerta na página */
+if((! empty($alert)) and (! empty($message))){
+    echo '';
+    // references http://getbootstrap.com/components/#alerts
+    echo '<p class="alert msg_alert '. $alert .'" role="alert" onclick="closeAlertMsg()">'. @$message .'</p>';
+}
+?>
 <!-- inicio -->
 <div class="container">

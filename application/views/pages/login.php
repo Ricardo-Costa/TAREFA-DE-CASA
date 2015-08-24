@@ -7,7 +7,7 @@
                     <h1>Tarefa de Casa<small></small></h1>
                 </div>
                 <div class="panel-body">
-                    <form id="form_login" class="form-horizontal" action="" method="post">
+                    <form id="form_login" class="form-horizontal" action="<?php echo base_url('user/login'); ?>" method="post">
                         <div class="form-group">
                             <label for="login_email" class="control-label col-sm-3">E-mail</label>
                             <div class="col-sm-7">

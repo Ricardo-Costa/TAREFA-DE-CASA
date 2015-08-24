@@ -53,5 +53,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /* configurando a rota para a view */
 $route['default_controller'] = 'pages/view';
 $route['(:any)'] = 'pages/view/$1';
+
+/* definindo outras rotas */
+$route['user/joe'] = 'user/users/34';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
