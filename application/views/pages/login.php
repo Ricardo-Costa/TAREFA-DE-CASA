@@ -28,8 +28,11 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-3"></div>
-                            <div class="col-sm-7">
-                                <a href="#">Esqueceu sua senha?</a>
+                            <div class="col-sm-4">
+                                <?php echo anchor(base_url('user/register'), 'Realizar cadastro.'); ?>
+                            </div>
+                            <div class="col-sm-4">
+                                <?php echo anchor('#', 'Esqueceu sua senha?', array('id' => 'forgot-password')); ?>
                             </div>
                         </div>
                     </form>

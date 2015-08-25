@@ -6,8 +6,9 @@ class User extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->helper(array('my_helper'));
-
+        $this->load->model('system_model', 'sys_mod');
+        $this->load->helper(array('my_helper', 'form'));
+        $this->load->library('form_validation');
     }
 
     /**
@@ -15,7 +16,32 @@ class User extends CI_Controller
      */
     public function register()
     {
-        // TODO - se for o primeiro usuário a ser cadastrar, o mesmo deverá ser setado como administrador
+        $this->form_validation->set_rules('nome', 'Nome', 'required');
+        $this->form_validation->set_rules('sobrenome', 'Sobrenome', 'required');
+        $this->form_validation->set_rules('senha', 'Senha', 'required');
+        $this->form_validation->set_rules('confirme_senha', 'Confirmação de Senha', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+
+        if ($this->form_validation->run() == FALSE){
+            if($_SERVER['REQUEST_METHOD'] == "POST"){
+
+                $data_alert = array(
+                    'alert' => 'alert-danger',
+                    'message' => validation_errors(' ', '<br/>')
+                );
+                form_view($this, 'register', FALSE, $data_alert);
+
+            } else{
+                form_view($this, 'register');
+            }
+        } else {
+            $data_alert = array(
+                'alert' => 'alert-success',
+                'message' => 'Seu cadastro foi realizado com sucesso, '.
+                    'verifique seu e-mail para ativar sua conta.'
+            );
+            form_view($this, 'register', FALSE, $data_alert);
+        }
     }
 
     /**

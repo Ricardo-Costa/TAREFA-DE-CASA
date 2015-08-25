@@ -18,10 +18,17 @@ if (! function_exists('getExternalPages'))
 
 if (! function_exists('form_view'))
 {
-    function form_view(CI_Controller $ctrl, $page, $logged_in = false)
+    function form_view(CI_Controller $ctrl, $page, $logged_in = false, $data = array())
     {
+        // redirecionar usuário para páginas internas caso ele esteja logado
+        if($logged_in and (in_array($page, getExternalPages())) and $page != 'about'){
+            redirect(base_url('inicio'), 'location', 301);
+        }
+
         // enviar mensagem de alerta para a página
-        $data['alert'] = null;
+        if(! isset($data['alert'])){
+            $data['alert'] = null;
+        }
 
         if ( ! file_exists(APPPATH.'/views/pages/'.$page.'.php')) {
             // exibir erro 404 de página não encontrada
