@@ -1,6 +1,9 @@
 /* fonte principal do h1 */
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
-body{ }
+body{
+    background: url(../images/background.jpg) center #ffffff no-repeat;
+    background-size: 60% 110% ;
+}
 div#painel_login{
     margin-top: 16%;
     box-shadow: 0 0 7px #cecece;
@@ -8,3 +11,7 @@ div#painel_login{
 #painel_login h1 { font-family: 'Indie Flower', Arial, serif; font-weight: 400; }
 /* p - alert */
 p.msg_alert{text-align: center; cursor: pointer}
+/* img - captcha */
+img#img_captcha{ width: 170px; height: 30px}
+img#img_refresh{ float: right; margin-right: 12%; cursor: pointer; height: 26px; width: 26px; opacity: 0.6}
+img#img_refresh:hover{opacity: 1}

@@ -4,7 +4,7 @@
         <div class="col-sm-6">
             <div id="painel_login" class="page panel-success">
                 <div class="panel-heading">
-                    <h1>Tarefa de Casa<small></small></h1>
+                    <h1>Tarefa de Casa<small> / Login </small></h1>
                 </div>
                 <div class="panel-body">
                     <form id="form_login" class="form-horizontal" action="<?php echo base_url('user/login'); ?>" method="post">
