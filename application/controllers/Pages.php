@@ -11,8 +11,6 @@ class Pages extends CI_Controller {
     {
         $this->load->helper(array('my_helper'));
 
-        $permission = ($this->session->userdata('logged_in'))? true : false ;
-
-        form_view($this, $page, $permission);
+        form_view($this, $page, $this->session->logged_in);
     }
 }

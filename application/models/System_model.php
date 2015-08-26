@@ -35,14 +35,14 @@ class System_model extends CI_Model
      * @method - Realizar busca específica na tabela
      *
      * @param $table - Recebe o nome da tabela
-     * @param int $id - ID da linha referida
+     * @param array() $array_where - ID da linha referida
      * @return array()
      */
-    public function find($table = '', $id = 0)
+    public function find($table = '', $array_where)
     {
-        if(($id > 0) and (in_array($table, $this->tables))){
+        if((is_array($array_where)) and (in_array($table, $this->tables))){
 
-            $query = $this->db->get_where($table, array('id' => $id));
+            $query = $this->db->get_where($table, $array_where);
             return $query->result_array();
         }
         return array();
