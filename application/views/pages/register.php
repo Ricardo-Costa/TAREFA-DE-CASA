@@ -1,9 +1,8 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-<div class="row">
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
-        <div id="painel_login" class="page panel-success">
-            <div class="panel-heading">
+        <div id="painel_formulario" class="page panel-success">
+            <div id="painel_cabecalho" class="panel-heading">
                 <h1>Tarefa de Casa<small> / Cadastro </small></h1>
             </div>
             <div class="panel-body">
@@ -63,4 +62,3 @@
         </div>
     </div>
     <div class="col-sm-3"></div>
-</div>

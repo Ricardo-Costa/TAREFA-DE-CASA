@@ -1,11 +1,6 @@
 /** Url padrão */
 const BASE_URL = 'http://'+location.host+'/';
 
-/** fechar caixa de alerta */
-function closeAlertMsg()
-{
-    $('.msg_alert').slideUp('slow');
-}
 /** Passwords Match in Forms */
 if (document.getElementById("password") != null)
 {

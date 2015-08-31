@@ -10,6 +10,7 @@ if (! function_exists('getExternalPages'))
      */
     function getExternalPages()
     {
+        // TODO - Defina aqui TODAS as páginas 'externas' do sistema (São acessadas sem necessitar de LOGIN)
         return array(
             'login', 'register', 'about'
         );
@@ -32,12 +33,10 @@ if (! function_exists('form_view'))
         if($logged_in and (in_array($page, getExternalPages())) and $page != 'about'){
             redirect(base_url('inicio'), 'location', 301);
         }
-
         // enviar mensagem de alerta para a página
         if(! isset($data['alert'])){
             $data['alert'] = null;
         }
-
         if ( ! file_exists(APPPATH.'/views/pages/'.$page.'.php')) {
             // exibir erro 404 de página não encontrada
             show_404();

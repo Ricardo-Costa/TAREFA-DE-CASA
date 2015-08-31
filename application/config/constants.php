@@ -83,3 +83,18 @@ define('EXIT_USER_INPUT', 7); // invalid user input
 define('EXIT_DATABASE', 8); // database error
 define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+// TODO - Definindo constantes do sistema
+/** -------------------------------------------- MY CONSTANTS --------------------------------------------- */
+
+/** Definindo constantes padrões da aplicação */
+define('SYS_TITLE',     'Tarefa de Casa');
+/** Obs: Esta etapa é necessária para que o sistema envie um email de confirmação de cadastro ao usuário. */
+define('SYS_EMAIL',     'my-email@mail.com'); // TODO - Definir E-mail aqui
+define('SYS_EMAIL_PASS','my-password'); // TODO - Definir senha aqui
+
+
+/** Definindo tipo de usuários */
+define('USER_STUDENT',  1);
+define('USER_TEACHER',  2);
+define('USER_ADMIN',    3);

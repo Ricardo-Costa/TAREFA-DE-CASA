@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root', /* <- TODO - Alterar Usuário padrão */
-	'password' => '', /* <- TODO - Alterar Senha padrão */
-	'database' => 'dbtarefadecasa', /* TODO - <- Alterar Banco de Dados */
+	'hostname' => 'localhost', // TODO - Alterar Host
+	'username' => 'usuario', // TODO - Alterar Usuário padrão
+	'password' => 'senha', // TODO - Alterar Senha padrão
+	'database' => 'nome-do-banco', // TODO - Alterar Banco de Dados
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

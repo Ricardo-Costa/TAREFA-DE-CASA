@@ -1,9 +1,10 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-    <div class="row">
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
-            <div id="painel_login" class="page panel-success">
-                <div class="panel-heading">
+            <div id="painel_formulario" class="page panel-success">
+                <div id="painel_cabecalho" class="panel-heading">
                     <h1>Tarefa de Casa<small> / Login </small></h1>
                 </div>
                 <div class="panel-body">
@@ -11,7 +12,7 @@
                         <div class="form-group">
                             <label for="login_email" class="control-label col-sm-3">E-mail</label>
                             <div class="col-sm-7">
-                                <input id="login_email" class="form-control" name="email" type="text" maxlength="60" required />
+                                <input id="login_email" class="form-control" name="email" type="email" maxlength="50" required />
                             </div>
                         </div>
                         <div class="form-group">
@@ -48,4 +49,3 @@
             </div>
         </div>
         <div class="col-sm-3"></div>
-    </div>

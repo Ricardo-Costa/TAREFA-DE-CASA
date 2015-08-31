@@ -1,17 +1,146 @@
 /* fonte principal do h1 */
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
-body{
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+/* max-width  */
+.text_footer {
+    display: none
+}
+@media screen and (min-width: 768px) {
+    .text_footer {display: block }
+}
+body {
+    font-family: 'Open Sans', 'sans-serif';
     background: url(../images/background.jpg) center #ffffff no-repeat;
-    background-size: 60% 110% ;
+    background-size: 826px 633px;
+    color: rgba(0, 0, 0, 0.71);
 }
-div#painel_login{
+/* container principal */
+div#cont_main {
+    background: url(../images/background.jpg) center #ffffff no-repeat;
+}
+div#painel_formulario{
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16), 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
     margin-top: 16%;
-    box-shadow: 0 0 7px #cecece;
 }
-#painel_login h1 { font-family: 'Indie Flower', Arial, serif; font-weight: 400; }
+div#painel_cabecalho{
+    background-color: #26A69A;
+}
+#painel_formulario h1 {
+    font-family: 'Indie Flower', Arial, serif; font-weight: 400;
+    color: #e3e3e3;
+}
+#painel_formulario h1 small {
+    color: #ffffff;
+}
+#painel_formulario input.btn-success {
+    background-color: #26A69A;
+    border: none;
+}
+#painel_formulario input.btn-success:hover{
+    background-color: #21887e;
+}
 /* p - alert */
-p.msg_alert{text-align: center; cursor: pointer}
+p.msg_alert{
+    text-align: center;
+}
 /* img - captcha */
-img#img_captcha{ width: 170px; height: 30px}
-img#img_refresh{ float: right; margin-right: 12%; cursor: pointer; height: 26px; width: 26px; opacity: 0.6}
-img#img_refresh:hover{opacity: 1}
+img#img_captcha{
+    width: 170px; height: 30px
+}
+img#img_refresh{
+    float: right;
+    margin-right: 12%;
+    cursor: pointer;
+    height: 26px;
+    width: 26px;
+    opacity: 0.6
+}
+img#img_refresh:hover{
+    opacity: 1
+}
+/* customizando class well */
+.well {
+    box-shadow: none;
+    background-color: #FCFCFC;
+}
+/* footer */
+footer {
+    background-color: #26A69A;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16), 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
+    border-color: #080808;
+    font-family: "Open Sans","sans-serif";
+    font-size: 14px;
+    color: #ffffff;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 200px;
+}
+footer a {
+    color: #ffd07d;
+}
+footer a:hover{
+    color: #ffa71e;
+    text-decoration: none;
+}
+footer hr {
+    border: none;
+    border-top: 1px dashed #e3e3e3;
+}
+p#company {
+    text-align: center
+}
+
+/* Customize MENU TOP */
+#custom-bootstrap-menu {
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16), 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 0px;
+    border: none;
+}
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(255, 255, 255, 1);
+}
+#custom-bootstrap-menu.navbar-default {
+    font-size: 14px;
+    background-color: rgba(38, 166, 154, 1);
+    border-width: 1px;
+    border-radius: 0;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(38, 166, 154, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(21, 143, 135, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(49, 143, 137, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #318f89;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #318f89;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #318f89;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #26a69a;
+}
+/* adaptar cor do Dropdown */
+
+@media screen and (max-width: 768px) {
+    #custom-bootstrap-menu a{
+        color: #ffffff
+    }
+    #custom-bootstrap-menu a:hover{
+        color: #e8e8e8;
+    }
+}

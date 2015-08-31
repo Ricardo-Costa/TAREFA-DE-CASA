@@ -51,7 +51,7 @@ class System_model extends CI_Model
     /**
      * @method - Salvar dados validados do formulário para a tabela
      *
-     * @param $table - Recebe o nome da tabela
+     * @param $table String - Recebe o nome da tabela
      * @param $data - Array contendo campos da tabela e valores a serem armazenados
      * @return bool
      */
@@ -63,4 +63,28 @@ class System_model extends CI_Model
         }
         return false;
     }
+
+    /**
+     * @method - Registrar novo usuário e enviar email de confirmação de cadastro
+     *
+     * @param $ctrl CI_Controller - Recebe o controller
+     * @param $table String - Recebe o nome da tabela
+     * @param $data - Array contendo campos da tabela e valores a serem armazenados
+     * @return bool
+     */
+    public function userRegister($ctrl, $table, $data)
+    {
+        $this->db->trans_begin();
+
+        $this->save($table, $data);
+
+        if (($this->db->trans_status() === FALSE) or (! $ctrl->_sendMailDefault($data))) {
+            $this->db->trans_rollback();
+            return false;
+        } else {
+            $this->db->trans_commit();
+            return true;
+        }
+    }
+
 }
